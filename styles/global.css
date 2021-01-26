@@ -7,15 +7,12 @@ body {
   line-height: 1.6;
   font-size: 18px;
 }
-h1:hover {
-  color: red;
-}
 * {
   box-sizing: border-box;
 }
 
 a {
-  color: #2d5612;
+  color: #345678;
   text-decoration: none;
 }
 
