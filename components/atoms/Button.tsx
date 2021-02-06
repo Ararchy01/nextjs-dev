@@ -1,7 +1,7 @@
-export default function Button() {
+export default function Button({ value }: { value: string }) {
   return (
-    <button className="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-yellow-400 hover:bg-pink-300">
-      Click me
+    <button className="btn text-gray-900 bg-yellow-300  hover:bg-yellow-200 outline-none">
+      {value}
     </button>
   );
 }
