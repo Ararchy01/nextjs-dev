@@ -6,6 +6,7 @@ import Link from "next/link";
 import Date from "../components/atoms/date";
 import { GetStaticProps } from "next";
 import OkCancel from "../components/molecules/OkCancel";
+import TextBox from "../components/atoms/TextBox";
 
 export default function Home({
   allPostsData,
@@ -31,6 +32,7 @@ export default function Home({
       <OkCancel />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
+        <TextBox />
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <Link href={`/posts/${id}`}>
