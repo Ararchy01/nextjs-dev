@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/templates/layout";
+import Layout, { siteTitle } from "../components/templates/Layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../components/atoms/date";
+import Date from "../components/atoms/Date";
 import { GetStaticProps } from "next";
 import OkCancel from "../components/molecules/OkCancel";
 import TextInput from "../components/atoms/TextInput";
