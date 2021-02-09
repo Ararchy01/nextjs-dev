@@ -5,7 +5,6 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/atoms/Date";
 import { GetStaticProps } from "next";
-import OkCancel from "../components/molecules/OkCancel";
 import TextInput from "../components/atoms/TextInput";
 
 export default function Home({
@@ -29,10 +28,9 @@ export default function Home({
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
-      <OkCancel />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <TextInput />
+        <Link href={`/ui`}>UI</Link>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <Link href={`/posts/${id}`}>
