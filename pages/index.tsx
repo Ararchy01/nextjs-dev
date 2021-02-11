@@ -6,6 +6,7 @@ import Link from "next/link";
 import Date from "../components/atoms/Date";
 import { GetStaticProps } from "next";
 import TextInput from "../components/atoms/TextInput";
+import { Paper } from "@material-ui/core";
 
 export default function Home({
   allPostsData,
@@ -33,17 +34,19 @@ export default function Home({
         <Link href={`/ui`}>UI</Link>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <Link href={`/posts/${id}`}>
-              <a>
-                <li className={utilStyles.listItem} key={id}>
-                  {title}
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-              </a>
-            </Link>
+            <Paper elevation={3}>
+              <Link href={`/posts/${id}`}>
+                <a>
+                  <li className={utilStyles.listItem} key={id}>
+                    {title}
+                    <br />
+                    <small className={utilStyles.lightText}>
+                      <Date dateString={date} />
+                    </small>
+                  </li>
+                </a>
+              </Link>
+            </Paper>
           ))}
         </ul>
       </section>
