@@ -34,7 +34,7 @@ export default function Home({
         <Link href={`/ui`}>UI</Link>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <Paper elevation={4}>
+            <Paper elevation={5}>
               <Link href={`/posts/${id}`}>
                 <a>
                   <li className={utilStyles.listItem} key={id}>
